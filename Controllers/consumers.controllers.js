@@ -2,7 +2,7 @@ const Consumers = require("../Models/consumers.model");
 
 const getConsumers = async(req,res)=>{
     try{ 
-        const consumers = await Consumers.find().populate('voucher');
+        const consumers = await Consumers.find().populate('consumer');
         res.json(consumers);
     }catch(e){
         console.log(e)
