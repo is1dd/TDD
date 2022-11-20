@@ -2,7 +2,7 @@ const Vouchers = require("../Models/vouchers.models");
 
 const getVouchers = async (req, res) => {
     try {
-        let vouchers = await Vouchers.find().populate('consumer');
+        let vouchers = await Vouchers.find().populate('voucher');
         res.json(vouchers)
     } catch (er) {
         res.status(404).send(er.message)
